@@ -4,7 +4,7 @@ $(function () {
 				isPlaceholderSupported = 'placeholder' in testElement;
 
 		if(!isPlaceholderSupported) {
-			$('input, textarea').each(function () {
+			$('input:not([type="submit"]), textarea').each(function () {
 				var $this = $(this);
 				$this.val($this.attr('placeholder'));
 			}).on('focus', function () {
